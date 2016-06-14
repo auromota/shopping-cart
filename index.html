@@ -3,8 +3,31 @@
 <head>
     <title>Shopping Cart</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    
+    <div class="container container-small">
+        <form class="panel panel-default" id="product">
+            <div class="panel-heading">
+                Product
+            </div>
+            <div class="panel-body">
+                <div class="col-lg-8">
+                    <label class="input-title">Name</label>
+                    <input class="input-bar" type="text" id="productName">
+                </div>
+                <div class="col-lg-2">
+                    <label class="input-title">Price</label>
+                    <input class="input-bar" type="text" id="productPrice">
+                </div>
+                <div class="col-lg-2">
+                    <label class="input-title"></label>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js">
 </body>
 </html>
