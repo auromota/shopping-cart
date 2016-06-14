@@ -13,3 +13,8 @@
 .badge-price {
     font-size: 15px !important;
 }
+
+.product-divider {
+    margin-top: 1px;
+    border-bottom: 1px #2b3e50 solid;
+}
