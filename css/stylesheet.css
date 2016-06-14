@@ -9,3 +9,7 @@
 .input-bar {
     width: 100%;
 }
+
+.badge-price {
+    font-size: 15px !important;
+}
