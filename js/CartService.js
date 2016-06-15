@@ -33,16 +33,16 @@ var CartService = (function () {
     return response;
 
     function buy(product) {
-        this[_itemsRef].push(product);
-        this[_itemsRef] = _items;
+        _items.push(product);
+        _items = _items;
     }
 
     function clear() {
-        this[_itemsRef] = [];
+        _items = [];
     }
 
     function _load(products) {
-        this[_itemsRef] = CartStorageService.loadLocalStorage();
+        _items = CartStorageService.loadLocalStorage();
     }
 
 })();
