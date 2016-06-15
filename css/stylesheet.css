@@ -18,3 +18,11 @@
     margin-top: 1px;
     border-bottom: 1px #2b3e50 solid;
 }
+
+.row-vertical-align {
+    display: flex;
+}
+
+.col-vertical-align {
+    margin: auto auto;
+}
