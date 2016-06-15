@@ -2,7 +2,6 @@ var CartService = (function () {
 
     var _itemsArray = [];
 
-    var _clearRef = 'clear';
     var _itemsRef = '_items';
 
     Object.defineProperty(this, _itemsRef, {
@@ -34,16 +33,16 @@ var CartService = (function () {
     return response;
 
     function buy(product) {
-        _items.push(product);
-        _items = _items;
+        this[_itemsRef].push(product);
+        this[_itemsRef] = _items;
     }
 
     function clear() {
-        _items = [];
+        this[_itemsRef] = [];
     }
 
     function _load(products) {
-        _items = CartStorageService.loadLocalStorage();
+        this[_itemsRef] = CartStorageService.loadLocalStorage();
     }
 
 })();
