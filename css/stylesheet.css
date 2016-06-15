@@ -1,5 +1,30 @@
-.container-small {
-    width: 60%;   
+@media screen and (min-width: 1200px) {
+    .container-small {
+        width: 80%;   
+    }       
+}
+
+@media screen and (max-width: 1999px) and (min-width: 256px) {
+    .col-vertical-align {
+        width: 83.333333%;
+    }
+}
+
+@media screen and (max-width: 255px) {
+    .col-vertical-align {
+        width: 100%;
+        margin-bottom: 5px !important;
+    }
+}
+
+.col-vertical-align {
+    margin: auto 5px;
+}
+
+@media screen and (min-width: 256px) {
+    .row-vertical-align {
+        display: flex;
+    }
 }
 
 .input-title {
@@ -17,12 +42,4 @@
 .product-divider {
     margin-top: 1px;
     border-bottom: 1px #2b3e50 solid;
-}
-
-.row-vertical-align {
-    display: flex;
-}
-
-.col-vertical-align {
-    margin: auto auto;
 }
