@@ -4,19 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -o"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/auromota/shopping-cart.git"
   },
   "author": "Auro Mota",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/auromota/shopping-cart/issues"
   },
   "homepage": "https://github.com/auromota/shopping-cart#readme",
   "dependencies": {
-    "sweetalert": "^1.1.3"
+    "sweetalert": "^1.1.3",
+    "http-server": "^0.9.0"
   }
 }
