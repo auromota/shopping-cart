@@ -15,7 +15,9 @@ var ProductService = (function () {
     function get() {
         var productsString = window.localStorage[localStorageKey] || '[]';
         products = JSON.parse(productsString);
-        HTMLService.updateCart(products);
+        if(products.length) {
+            HTMLService.updateCart(products);            
+        }
     }
 
     return {

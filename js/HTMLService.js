@@ -70,7 +70,7 @@ var HTMLService = (function () {
         var span = document.createElement('span');
         span.classList.add('badge');
         span.classList.add('badge-price');
-        span.innerHTML = price;
+        span.innerHTML = formatPrice(price);
         return span;
     }
 
@@ -79,9 +79,27 @@ var HTMLService = (function () {
         a.classList.add('list-group-item');
         return a;
     }
-    
+
+    function formatPrice(price) {
+        if (hasDecimalDigit(price)) {
+            var length = getDigitCount(price);
+            return price.toPrecision(2 + getDigitCount(price));
+        } else {
+            return price + '.00';
+        }
+    }
+
+    function getDigitCount(price) {
+        price = price.toString();
+        return price.substring(0, price.indexOf('.')).length;
+    }
+
+    function hasDecimalDigit(price) {
+        return (price - Math.floor(price)) != 0;
+    }
 
     return {
         updateCart: updateCart
     }
+    
 })();
