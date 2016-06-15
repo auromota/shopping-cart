@@ -23,10 +23,6 @@ var CartService = (function () {
             value: buy,
             writable: false
         },
-        get: {
-            value: get,
-            writable: false
-        },
         clear: {
             value: clear,
             writable: false
@@ -40,10 +36,6 @@ var CartService = (function () {
     function buy(product) {
         _items.push(product);
         _items = _items;
-    }
-
-    function get() {
-        return _items;
     }
 
     function clear() {
