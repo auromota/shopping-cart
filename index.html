@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <title>Shopping Cart</title>
     <meta charset="utf-8">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="node_modules/sweetalert/dist/sweetalert.css">
 </head>
+
 <body>
     <div class="container container-small">
         <form class="panel panel-default" id="product">
@@ -36,28 +38,25 @@
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    <a class="list-group-item">
-                        <span class="badge badge-price">5.00</span>
-                        Rice                        
-                    </a>
-                    <a class="list-group-item">
-                        <span class="badge badge-price">2.00</span>
-                        Bean                        
-                    </a>
-                    <a class="list-group-item">
-                        <span class="badge badge-price">0.50</span>
-                        Salt                        
-                    </a>
+                    <div id="productsList">
+                        <a class="list-group-item">
+                            Your cart is empty.
+                        </a>
+                    </div>
                     <div class="product-divider"></div>
-                    <a class="list-group-item">
-                        <span class="badge badge-price">7.50</span>
-                        Total                        
-                    </a>
+                    <div id="totalPrice">
+                        <a class="list-group-item">
+                            <span class="badge badge-price">0.00</span> Total
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/HTMLService.js"></script>
+    <script src="js/ProductService.js"></script>
     <script src="js/ProductController.js"></script>
 </body>
+
 </html>

@@ -3,18 +3,23 @@ var ProductService = (function () {
     var localStorageKey = 'products';
     var products = [];
 
-    function saveProduct(product) {
+    get();
+
+    function save(product) {
+        product.price = parseFloat(product.price);
         products.push(product);
         window.localStorage[localStorageKey] = JSON.stringify(products);
+        HTMLService.updateCart(products);
     }
 
-    function getProducts() {
-        var productsString = window.localStorage[localStorageKey];
+    function get() {
+        var productsString = window.localStorage[localStorageKey] || '[]';
         products = JSON.parse(productsString);
+        HTMLService.updateCart(products);
     }
 
     return {
-        saveProduct: saveProduct,
-        getProducts: getProducts
+        save: save
     };
+    
 })();

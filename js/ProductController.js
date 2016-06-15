@@ -10,13 +10,17 @@
     function formSubmitHandler(event) {
         event.preventDefault();
         if (isValid()) {
-            console.log('Válido!');
+            var product = {
+                name: getProductName(),
+                price: getProductPrice()
+            };
+            ProductService.save(product);
             clearFields();
         } else {
             console.log('Inválido!');
         }
     }
-    
+
     function clearFields() {
         var inputName = document.getElementById('productName');
         inputName.value = '';
