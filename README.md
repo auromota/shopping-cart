@@ -2,7 +2,7 @@
 Shopping Cart is an HTML5 application developed in vanilla javascript.
 
 ## How to run
-After the downloading or cloning the repository, use:
+After downloading or cloning the repository, use:
 ```bash
 npm install
 npm start
