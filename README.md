@@ -9,6 +9,6 @@ npm start
 ```
 
 ## Copyright and License
-Copyright 2016 Auro Mota
+Copyright (c) 2016 Auro Mota
 
 This software is released under the MIT license.
