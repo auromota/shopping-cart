@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/auromota/shopping-cart#readme",
   "dependencies": {
-    "sweetalert": "^1.1.3",
+    "sweetalert": "^1.1.3"
+  },
+  "devDependencies": {
     "http-server": "^0.9.0"
   }
 }
