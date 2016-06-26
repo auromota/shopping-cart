@@ -3,8 +3,41 @@
     init();
 
     function init() {
+        initForm();
+        initDeleteBtn();
+    }
+
+    function initForm() {
         var form = document.getElementById('product');
         form.addEventListener('submit', formSubmitHandler);
+    }
+
+    function initDeleteBtn() {
+        var btn = document.getElementById('deleteAll');
+        btn.addEventListener('click', btnDeleteHandler);
+    }
+
+    function btnDeleteHandler() {
+        showConfirmDelete();
+    }
+
+    function showConfirmDelete() {
+        swal({
+            title: 'Are you sure?',
+            text: 'It will remove all products from your cart.',
+            type: 'warning',
+            showCancelButton: true,
+            closeOnConfirm: false
+        }, deleteProducts);
+    }
+
+    function deleteProducts() {
+        CartService.clear();
+        showDeleteSuccess();
+    }
+
+    function showDeleteSuccess() {
+        swal('Done!', 'Your cart is now empty.', 'success');
     }
 
     function formSubmitHandler(event) {
@@ -14,10 +47,9 @@
                 name: getProductName(),
                 price: getProductPrice()
             };
-            ProductService.save(product);
+            product.price = parseFloat(product.price);
+            CartService.buy(product);
             clearFields();
-        } else {
-            console.log('Inválido!');
         }
     }
 
@@ -39,9 +71,8 @@
     }
 
     function isValid() {
-        if (validateName()) {
-            if (validatePrice()) return true;
-            return false;
+        if (validateName() && validatePrice()) {
+            return true;
         }
         return false;
     }

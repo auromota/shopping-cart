@@ -34,29 +34,29 @@
     <div class="container container-small">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Shopping Cart
+                <div class="row row-vertical-align">
+                    <div class="col-lg-10 col-vertical-align">
+                        Shopping Cart
+                    </div>
+                    <div class="col-lg-2">
+                        <button class="btn btn-danger" id="deleteAll">Delete all</button>
+                    </div>
+                </div>
             </div>
             <div class="panel-body">
                 <div class="list-group">
-                    <div id="productsList">
-                        <a class="list-group-item">
-                            Your cart is empty.
-                        </a>
-                    </div>
+                    <div id="productsList"></div>
                     <div class="product-divider"></div>
-                    <div id="totalPrice">
-                        <a class="list-group-item">
-                            <span class="badge badge-price">0.00</span> Total
-                        </a>
-                    </div>
+                    <div id="totalPrice"></div>
                 </div>
             </div>
         </div>
     </div>
     <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
     <script src="js/HTMLService.js"></script>
-    <script src="js/ProductService.js"></script>
-    <script src="js/ProductController.js"></script>
+    <script src="js/CartStorageService.js"></script>
+    <script src="js/CartController.js"></script>
+    <script src="js/CartService.js"></script>
 </body>
 
 </html>

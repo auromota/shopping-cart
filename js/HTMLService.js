@@ -43,7 +43,22 @@ var HTMLService = (function () {
     function updateList(products) {
         productsList = document.getElementById('productsList');
         productsList.innerHTML = '';
+        if(products.length === 0) {
+            appendEmptyLabel();
+        }
         products.forEach(appendProduct);
+    }
+
+    function appendEmptyLabel() {
+        var element = buildEmptyLabel();
+        productsList.appendChild(element);
+    }
+
+    function buildEmptyLabel() {
+        var a = document.createElement('a');
+        a.classList.add('list-group-item');
+        a.innerHTML = 'Your cart is empty.';
+        return a;
     }
 
     function appendProduct(product) {
